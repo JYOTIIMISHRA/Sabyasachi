@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden; /* No scrolling */
+      font-family: "Poppins", sans-serif;
+      background-color: black;
+    }
+
+    /* Centered video */
+    .video-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vw;
+      height: 80vh;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(255,255,255,0.2);
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Social media icons on left */
+    .socials {
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 10;
+    }
+
+    .socials a {
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
+      background: rgba(0,0,0,0.4);
+      padding: 10px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .socials a:hover {
+      background: white;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    /* QR placeholder */
+    .qr-placeholder {
+      position: absolute;
+      right: 50px;
+      bottom: 50px;
+      width: 150px;
+      height: 150px;
+      border: 2px dashed white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 10;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Centered video -->
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+
+  <!-- Social icons -->
+  <div class="socials">
+    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- QR placeholder -->
+  <div class="qr-placeholder">
+    QR CODE
+  </div>
+</body>
+</html>
